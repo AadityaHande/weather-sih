@@ -1,0 +1,31 @@
+# Render deployment blueprint for the Mausam backend.
+# https://render.com/docs/blueprint-spec
+#
+# Usage: connect this repository in the Render dashboard as a "Blueprint";
+# Render will read this file automatically. Secret values (DATABASE_URL,
+# AQI_DATA_GOV_IN_KEY, etc.) are marked `sync: false` so Render prompts for
+# them in the dashboard rather than storing them in source control.
+
+services:
+  - type: web
+    name: mausam-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: ADAPTER_MODE
+        value: live
+      - key: FIXTURE_SCENARIO
+        value: normal
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+      - key: AQI_DATA_GOV_IN_KEY
+        sync: false
+      - key: AQI_AQICN_TOKEN
+        sync: false
+      - key: OWM_API_KEY
+        sync: false

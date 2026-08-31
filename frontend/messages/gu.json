@@ -1,0 +1,274 @@
+{
+  "nav": {
+    "home": "હોમ ફીડ",
+    "weather": "હવામાન",
+    "map": "ઇન્ટરેક્ટિવ નકશો",
+    "chatbot": "AI ચેટબોટ",
+    "settings": "સેટિંગ્સ"
+  },
+  "common": {
+    "today": "આજે",
+    "tomorrow": "આવતીકાલે",
+    "tonight": "આજે રાત્રે",
+    "am": "સવારે",
+    "pm": "સાંજે",
+    "appName": "મૌસમ",
+    "loading": "લોડ થઈ રહ્યું છે...",
+    "save": "પસંદગીઓ સાચવો",
+    "saved": "સફળતાપૂર્વક સાચવવામાં આવ્યું!",
+    "cancel": "રદ કરો",
+    "close": "બંધ કરો",
+    "search": "શોધો...",
+    "location": "સ્થાન",
+    "currentLoc": "હાલનું સ્થાન",
+    "gpsActive": "GPS સક્રિય",
+    "error": "કંઈક ખોટું થયું",
+    "retry": "ફરી પ્રયાસ કરો",
+    "language": "ભાષા",
+    "selectLanguage": "ભાષા પસંદ કરો",
+    "allRightsReserved": "સર્વાધિકાર સુરક્ષિત.",
+    "live": "લાઈવ",
+    "high": "મહત્તમ",
+    "low": "ન્યૂનતમ",
+    "feelsLike": "અનુભવાતું",
+    "direction": "દિશા"
+  },
+  "personas": {
+    "health": {
+      "title": "આરોગ્ય-સભાન",
+      "shortTitle": "આરોગ્ય",
+      "subtitle": "AQI ડાયલ, UV ઇન્ડેક્સ, પરાગ રજ આગાહી અને ભેજ ચેતવણીઓ"
+    },
+    "fitness": {
+      "title": "ફિટનેસ પ્રેમી",
+      "shortTitle": "દોડવીર",
+      "subtitle": "વર્કઆઉટ માટે શ્રેષ્ઠ સમય, ગરમીની ચેતવણી અને વરસાદની આગાહી"
+    },
+    "beach": {
+      "title": "દરિયાકિનારો / સર્ફર",
+      "shortTitle": "બીચ",
+      "subtitle": "ભરતી ચાર્ટ, મોજાની ઊંચાઈ, સમુદ્રનું તાપમાન અને દિશા"
+    },
+    "traveler": {
+      "title": "મુસાફર",
+      "shortTitle": "પ્રવાસ",
+      "subtitle": "બહુવિધ શહેરોનું હવામાન, ફ્લાઇટ હવામાન જોખમ અને પેકિંગ ટિપ્સ"
+    },
+    "agriculture": {
+      "title": "ખેડૂત / કૃષિ નિષ્ણાત",
+      "shortTitle": "ખેતી",
+      "subtitle": "જમીનનો ભેજ, બાષ્પીભવન દર અને છંટકાવ માટે યોગ્ય સમય"
+    },
+    "family": {
+      "title": "પરિવાર અને બાળકો",
+      "shortTitle": "પરિવાર",
+      "subtitle": "બગીચાનું હવામાન, સપ્તાહના અંતની આગાહી અને રમતનું મેદાન"
+    },
+    "commute": {
+      "title": "રોજિંદા મુસાફર",
+      "shortTitle": "મુસાફરી",
+      "subtitle": "ટ્રાફિક હવામાન જોખમ, રસ્તાની સ્થિતિ અને દૃશ્યતા"
+    },
+    "event": {
+      "title": "ઇવેન્ટ પ્લાનર",
+      "shortTitle": "ઇવેન્ટ",
+      "subtitle": "10-દિવસની આગાહી, વરસાદની શક્યતા અને શ્રેષ્ઠ સમય"
+    }
+  },
+  "metrics": {
+    "temperature": "તાપમાન",
+    "humidity": "ભેજ",
+    "wind": "પવનની ઝડપ",
+    "rain": "વરસાદની શક્યતા",
+    "uv": "UV ઇન્ડેક્સ",
+    "aqi": "હવાની ગુણવત્તા",
+    "notes": {
+      "warm": "ગરમ વાતાવરણ",
+      "idealThermal": "આદર્શ તાપમાન સંતુલન",
+      "elevatedMoisture": "વધારે ભેજ",
+      "comfortableMoisture": "સુખદ ભેજ",
+      "moderateWind": "મધ્યમ પવન અવરોધ",
+      "lightWind": "હળવો ધીમો પવન",
+      "scatteredRain": "છૂટાછવાયા વરસાદનું જોખમ",
+      "dryConditions": "સૂકું હવામાન અપેક્ષિત",
+      "highUv": "તીવ્ર UV કિરણો",
+      "safeUv": "સુરક્ષિત UV સ્તર",
+      "moderateAqi": "મધ્યમ હવાની ગુણવત્તા",
+      "cleanAqi": "સ્વચ્છ શુદ્ધ હવા"
+    }
+  },
+  "insights": {
+    "headerSuffix": "ઇનસાઇટ્સ",
+    "aiPowered": "AI સંચાલિત",
+    "personaIndexTitle": "પર્સના ઇન્ડેક્સ અને ઇનસાઇટ્સ",
+    "personaIndexSubtitle": "તમારી સક્રિય પ્રોફાઇલ અનુસાર હવામાનનું સચોટ વિશ્લેષણ",
+    "dynamicPriority": "ગતિશીલ પ્રાથમિકતા",
+    "managePersonas": "સેટિંગ્સમાં પર્સના મેનેજ કરો",
+    "nextWindow": "આગામી શ્રેષ્ઠ સમય",
+    "avoid": "ટાળો",
+    "score": "સ્કોર",
+    "notThisTime": "આ સમય નથી જોઈતો?",
+    "suggestAnother": "બીજો સમય સૂચવો ▾",
+    "closeAlternative": "▲ બંધ કરો",
+    "optionOf": "{total} માંથી વિકલ્પ {current}",
+    "nextBest": "આગળનો શ્રેષ્ઠ",
+    "filters": {
+      "all": "બધા",
+      "morning": "સવાર",
+      "afternoon": "બપોર",
+      "evening": "સાંજ",
+      "reset": "રીસેટ"
+    },
+    "reasons": {
+      "coolAirBreeze": "ઠંડી હવા અને હળવી લહેરખી",
+      "postSunsetCooling": "સૂર્યાસ્ત પછીની ઠંડક",
+      "lowestTemp": "દિવસનું સૌથી ઓછું તાપમાન",
+      "zeroSolarUv": "શૂન્ય સૌર UV કિરણો",
+      "cleanAirDispersed": "સ્વચ્છ હવા અને ઓછું પ્રદૂષણ",
+      "freshAir": "તાજી શુદ્ધ હવા",
+      "clearRoads": "સાફ રસ્તા અને સરળ મુસાફરી",
+      "offshoreBreeze": "દરિયાઈ પવન અને હળવો તડકો",
+      "deepSoilRoot": "જમીનમાં ઊંડે સુધી ભેજ",
+      "mildParkPlaytime": "બગીચામાં રમવા માટે ઉત્તમ હવામાન",
+      "middayHeatUv": "બપોરનો આકરો તડકો અને UV",
+      "morningSmog": "સવારનું ધુમ્મસ / પ્રદૂષણ",
+      "rushHourTraffic": "ભીડના સમયનો ટ્રાફિક વિલંબ",
+      "choppyWindsUv": "તોફાની પવન અને તીવ્ર તડકો",
+      "highEvaporationHeat": "વધુ બાષ્પીભવન ગરમી",
+      "peakHeatDirectUv": "તીવ્ર ગરમી અને સીધો તડકો"
+    }
+  },
+  "home": {
+    "glanceTitle": "લાઈવ વાતાવરણ વિહંગાવલોકન",
+    "viewDashboard": "સંપૂર્ણ હવામાન ડેશબોર્ડ જુઓ",
+    "p0Warning": "P0 ગંભીર ચેતવણી",
+    "moisture": "ભેજ",
+    "precipitation": "વરસાદ",
+    "moderate": "મધ્યમ"
+  },
+  "weather": {
+    "windDirectionFormat": "{dir} દિશા ({deg}°)",
+    "windDirectionSimple": "{dir} દિશા",
+    "activityRings": {
+      "precipitationLabel": "વરસાદનું પ્રમાણ",
+      "precipitationSub": "વરસાદની શક્યતા",
+      "humidityLabel": "ભેજ",
+      "humiditySub": "વાતાવરણીય ભેજ",
+      "windLabel": "પવનની ઝડપ",
+      "windSub": "સપાટી પરનો પવન"
+    },
+    "forecastTabs": {
+      "temperature": "તાપમાન",
+      "precipitation": "વરસાદ",
+      "wind": "પવન"
+    },
+    "humidityStatuses": {
+      "humid": "ભેજવાળું",
+      "comfortable": "સુખદ",
+      "dry": "સૂકું"
+    },
+    "uvLevels": {
+      "low": "ઓછું જોખમ",
+      "moderate": "મધ્યમ જોખમ",
+      "high": "વધુ જોખમ",
+      "veryHigh": "ખૂબ વધુ જોખમ",
+      "extreme": "અત્યંત તીવ્ર",
+      "goodUv": "સુરક્ષિત UV"
+    },
+    "directions": {
+      "N": "ઉત્તર",
+      "S": "દક્ષિણ",
+      "E": "પૂર્વ",
+      "W": "પશ્ચિમ",
+      "NE": "ઈશાન",
+      "NW": "વાયવ્ય",
+      "SE": "અગ્નિ",
+      "SW": "નૈઋત્ય",
+      "NNE": "ઉત્તર-ઈશાન",
+      "ENE": "પૂર્વ-ઈશાન",
+      "ESE": "પૂર્વ-અગ્નિ",
+      "SSE": "દક્ષિણ-અગ્નિ",
+      "SSW": "દક્ષિણ-નૈઋત્ય",
+      "WSW": "પશ્ચિમ-નૈઋત્ય",
+      "WNW": "પશ્ચિમ-વાયવ્ય",
+      "NNW": "ઉત્તર-વાયવ્ય"
+    },
+    "conditions": {
+      "clearDay": "સ્વચ્છ આકાશ • તડકો",
+      "clearNight": "સ્વચ્છ રાત • તારામંડળ",
+      "partlyCloudyDay": "આંશિક વાદળછાયું",
+      "partlyCloudyNight": "આંશિક વાદળછાયી રાત",
+      "overcast": "વાદળછાયું વાતાવરણ",
+      "fog": "ધુમ્મસ",
+      "drizzle": "ઝરમર વરસાદ",
+      "rain": "વરસાદ",
+      "showers": "વરસાદી ઝાપટાં",
+      "thunderstorm": "વાવાઝોડાની ચેતવણી",
+      "snow": "બરફવર્ષા",
+      "clear": "સ્વચ્છ આકાશ",
+      "mainlyClear": "મુખ્યત્વે સ્વચ્છ",
+      "partlyCloudy": "આંશિક વાદળછાયું"
+    },
+    "title": "વાતાવરણીય નિદાન",
+    "subtitle": "લાઈવ સેન્સર માપદંડો",
+    "windGusts": "પવનના ઝાપટા",
+    "pressure": "હવાનું દબાણ",
+    "cloudCover": "વાદળોનું પ્રમાણ",
+    "surfaceMsl": "સમુદ્ર સપાટીનું દબાણ",
+    "overcastIndex": "વાદળછાયું ઇન્ડેક્સ",
+    "celestialTitle": "સૂર્ય અને ખગોળીય ચક્ર",
+    "celestialSubtitle": "સૂર્ય ગણતરી અને દિવસનો સમયગાળો",
+    "sunrise": "સૂર્યોદય",
+    "sunset": "સૂર્યાસ્ત",
+    "daylightDuration": "દિવસનો સમયગાળો"
+  },
+  "chatbot": {
+    "title": "મૌસમ AI",
+    "badge": "લાઈવ ટેલિમેટ્રી",
+    "welcomeMsg": "નમસ્તે! હું તમારો મૌસમ હવામાન સાથી છું. હાલમાં વરસાદ પડી રહ્યો છે કે નહીં, આગામી આગાહી અથવા વર્કઆઉટ વિશે કંઈપણ પૂછો!",
+    "placeholder": "લાઈવ વરસાદ, આગાહી અથવા કોઈપણ શહેરના હવામાન વિશે પૂછો...",
+    "send": "મોકલો",
+    "helper": "હાલની સ્થિતિ અને આગાહી વચ્ચેનો તફાવત સ્પષ્ટ દર્શાવે છે. મોકલવા માટે Enter દબાવો.",
+    "analyzing": "લાઈવ હવામાન ડેટાનું વિશ્લેષણ થઈ રહ્યું છે...",
+    "rainingNow": "હાલમાં વરસાદ પડી રહ્યો છે",
+    "notRainingNow": "હાલમાં વરસાદ નથી",
+    "rainForecast": "વરસાદની આગાહી",
+    "confirmLocation": "સ્થાનની પુષ્ટિ કરો અથવા બદલો",
+    "locationDesc": "તમારી બારી બહારના હવામાન સાથે માહિતી મેળ ખાય છે તેની ખાતરી કરો",
+    "useGps": "ઓટો-ડિટેક્ટેડ GPS સ્થાનનો ઉપયોગ કરો"
+  },
+  "settings": {
+    "title": "સિસ્ટમ સેટિંગ્સ",
+    "subtitle": "પસંદગીઓ, પ્રાદેશિક ભાષાઓ અને આરોગ્ય પ્રોફાઇલનું સંચાલન કરો",
+    "accountTitle": "ખાતાની પ્રોફાઇલ",
+    "authenticated": "પ્રમાણિત એકાઉન્ટ",
+    "guest": "અતિથિ સત્ર",
+    "authState": "પ્રમાણીકરણ સ્થિતિ:",
+    "guestDesc": "સ્થાનિક સત્ર (લૉગિન જરૂરી નથી)",
+    "signOut": "સાઇન આઉટ",
+    "signIn": "સાઇન ઇન",
+    "languageSection": {
+      "title": "ભાષા અને પ્રાદેશિક પસંદગી",
+      "subtitle": "ભારતની મુખ્ય સત્તાવાર ભાષાઓમાં RTL સપોર્ટ સાથે ઉપલબ્ધ",
+      "current": "વર્તમાન ભાષા",
+      "switchBtn": "ભાષા બદલો",
+      "phase1": "તબક્કો 1: મુખ્ય ભાષાઓ",
+      "phase2": "તબક્કો 2: અન્ય અનુસૂચિત ભાષાઓ",
+      "aiBadge": "AI ચેટબોટ સપોર્ટેડ",
+      "rtlBadge": "જમણેથી ડાબે લેઆઉટ"
+    },
+    "units": {
+      "title": "ડિસ્પ્લે એકમો",
+      "subtitle": "તાપમાન સ્કેલ અને પવનની ગતિના એકમો કસ્ટમાઇઝ કરો",
+      "temperature": "તાપમાન સ્કેલ",
+      "wind": "પવનની ઝડપ ફોર્મેટ"
+    },
+    "personasTitle": "સક્રિય પર્સના",
+    "personasSubtitle": "હોમપેજ માટે વધુમાં વધુ 3 પ્રાથમિકતા પ્રોફાઇલ્સ પસંદ કરો ({current}/3 પસંદ કરેલ)",
+    "maxThreeAllowed": "મહત્તમ 3 માન્ય",
+    "maxThreeBanner": "મહત્તમ 3 પર્સના પસંદ કરવાની મંજૂરી છે",
+    "maxThreeBannerDesc": "તમે માત્ર 3 પર્સના પસંદ કરી શકો છો. નવું ઉમેરવા માટે અગાઉના એકને દૂર કરો.",
+    "dismiss": "રદ કરો",
+    "saveSuccess": "પસંદગીઓ સફળતાપૂર્વક અપડેટ થઈ ગઈ! હોમપેજ કાર્ડ્સ તરત જ પુનઃ ગોઠવાશે."
+  }
+}

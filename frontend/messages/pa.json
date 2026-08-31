@@ -1,0 +1,274 @@
+{
+  "nav": {
+    "home": "ਹੋਮ ਫੀਡ",
+    "weather": "ਮੌਸਮ",
+    "map": "ਨਕਸ਼ਾ",
+    "chatbot": "AI ਚੈਟਬੋਟ",
+    "settings": "ਸੈਟਿੰਗਾਂ"
+  },
+  "common": {
+    "today": "ਅੱਜ",
+    "tomorrow": "ਕੱਲ੍ਹ",
+    "tonight": "ਅੱਜ ਰਾਤ",
+    "am": "ਸਵੇਰੇ",
+    "pm": "ਸ਼ਾਮ",
+    "appName": "ਮੌਸਮ",
+    "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+    "save": "ਤਰਜੀਹਾਂ ਸੁਰੱਖਿਅਤ ਕਰੋ",
+    "saved": "ਸਫਲਤਾਪੂਰਵਕ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ!",
+    "cancel": "ਰੱਦ ਕਰੋ",
+    "close": "ਬੰਦ ਕਰੋ",
+    "search": "ਖੋਜੋ...",
+    "location": "ਸਥਾਨ",
+    "currentLoc": "ਮੌਜੂਦਾ ਸਥਾਨ",
+    "gpsActive": "GPS ਕਿਰਿਆਸ਼ੀਲ ਹੈ",
+    "error": "ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ",
+    "retry": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+    "language": "ਭਾਸ਼ਾ",
+    "selectLanguage": "ਭਾਸ਼ਾ ਚੁਣੋ",
+    "allRightsReserved": "ਸਾਰੇ ਅਧਿਕਾਰ ਰਾਖਵੇਂ ਹਨ।",
+    "live": "ਲਾਈਵ",
+    "high": "ਵੱਧ ਤੋਂ ਵੱਧ",
+    "low": "ਘੱਟ ਤੋਂ ਘੱਟ",
+    "feelsLike": "ਮਹਿਸੂਸ ਹੁੰਦਾ",
+    "direction": "ਦਿਸ਼ਾ"
+  },
+  "personas": {
+    "health": {
+      "title": "ਸਿਹਤ-ਜਾਗਰੂਕ",
+      "shortTitle": "ਸਿਹਤ",
+      "subtitle": "AQI ਸੂਚਕਾਂਕ, UV ਪੱਧਰ, ਪਰਾਗ ਪੂਰਵ-ਅਨੁਮਾਨ ਅਤੇ ਨਮੀ ਚੇਤਾਵਨੀਆਂ"
+    },
+    "fitness": {
+      "title": "ਕਸਰਤ ਪ੍ਰੇਮੀ",
+      "shortTitle": "ਦੌੜਾਕ",
+      "subtitle": "ਵਰਕਆਉਟ ਲਈ ਵਧੀਆ ਸਮਾਂ, ਗਰਮੀ ਚੇਤਾਵਨੀ ਅਤੇ ਮੀਂਹ ਦੀ ਭਵਿੱਖਬਾਣੀ"
+    },
+    "beach": {
+      "title": "ਸਮੁੰਦਰ ਕੰਢਾ / ਸਰਫਰ",
+      "shortTitle": "ਬੀਚ",
+      "subtitle": "ਲਹਿਰਾਂ ਦਾ ਚਾਰਟ, ਲਹਿਰ ਦੀ ਉਚਾਈ, ਸਮੁੰਦਰੀ ਤਾਪਮਾਨ ਅਤੇ ਦਿਸ਼ਾ"
+    },
+    "traveler": {
+      "title": "ਯਾਤਰੀ",
+      "shortTitle": "ਯਾਤਰਾ",
+      "subtitle": "ਕਈ ਸ਼ਹਿਰਾਂ ਦਾ ਮੌਸਮ, ਉਡਾਣ ਮੌਸਮ ਜੋਖਮ ਅਤੇ ਯਾਤਰਾ ਸੁਝਾਅ"
+    },
+    "agriculture": {
+      "title": "ਕਿਸਾਨ / ਖੇਤੀਬਾੜੀ ਮਾਹਰ",
+      "shortTitle": "ਖੇਤੀ",
+      "subtitle": "ਮਿੱਟੀ ਦੀ ਨਮੀ, ਵਾਸ਼ਪੀਕਰਨ ਦਰ ਅਤੇ ਸਪਰੇਅ ਕਰਨ ਦਾ ਢੁਕਵਾਂ ਸਮਾਂ"
+    },
+    "family": {
+      "title": "ਪਰਿਵਾਰ ਅਤੇ ਬੱਚੇ",
+      "shortTitle": "ਪਰਿਵਾਰ",
+      "subtitle": "ਪਾਰਕ ਦਾ ਮੌਸਮ, ਵੀਕਐਂਡ ਪੂਰਵ-ਅਨੁਮਾਨ ਅਤੇ ਖੇਡ ਮੈਦਾਨ ਸੁਵਿਧਾ"
+    },
+    "commute": {
+      "title": "ਰੋਜ਼ਾਨਾ ਯਾਤਰੀ",
+      "shortTitle": "ਸਫ਼ਰ",
+      "subtitle": "ਟ੍ਰੈਫਿਕ ਮੌਸਮ ਜੋਖਮ, ਸੜਕ ਦੀ ਪਕੜ ਅਤੇ ਦਿੱਖ ਪੱਧਰ"
+    },
+    "event": {
+      "title": "ਇਵੈਂਟ ਪਲਾਨਰ",
+      "shortTitle": "ਇਵੈਂਟ",
+      "subtitle": "10-ਦਿਨਾਂ ਦਾ ਪੂਰਵ-ਅਨੁਮਾਨ, ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ ਅਤੇ ਉੱਤਮ ਸਮਾਂ"
+    }
+  },
+  "metrics": {
+    "temperature": "ਤਾਪਮਾਨ",
+    "humidity": "ਨਮੀ",
+    "wind": "ਹਵਾ ਦੀ ਗਤੀ",
+    "rain": "ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ",
+    "uv": "ਯੂਵੀ ਇੰਡੈਕਸ",
+    "aqi": "ਹਵਾ ਦੀ ਗੁਣਵੱਤਾ",
+    "notes": {
+      "warm": "ਗਰਮ ਹਾਲਾਤ",
+      "idealThermal": "ਆਦਰਸ਼ ਤਾਪਮਾਨ ਸੰਤੁਲਨ",
+      "elevatedMoisture": "ਜ਼ਿਆਦਾ ਨਮੀ",
+      "comfortableMoisture": "ਸੁਹਾਵਣੀ ਨਮੀ",
+      "moderateWind": "ਦਰਮਿਆਨੀ ਹਵਾ ਰੁਕਾਵਟ",
+      "lightWind": "ਹਲਕੀ ਠੰਢੀ ਹਵਾ",
+      "scatteredRain": "ਛਿੱਟੇ ਪੈਣ ਦਾ ਖਤਰਾ",
+      "dryConditions": "ਖੁਸ਼ਕ ਮੌਸਮ ਦੀ ਉਮੀਦ",
+      "highUv": "ਤੇਜ਼ ਯੂਵੀ ਕਿਰਨਾਂ",
+      "safeUv": "ਸੁਰੱਖਿਅਤ ਯੂਵੀ ਪੱਧਰ",
+      "moderateAqi": "ਦਰਮਿਆਨੀ ਹਵਾ ਕੁਆਲਿਟੀ",
+      "cleanAqi": "ਸਾਫ਼ ਸ਼ੁੱਧ ਹਵਾ"
+    }
+  },
+  "insights": {
+    "headerSuffix": "ਅੰਤਰਦ੍ਰਿਸ਼ਟੀ",
+    "aiPowered": "AI ਸਮਰੱਥ",
+    "personaIndexTitle": "ਪਰਸੋਨਾ ਸੂਚਕਾਂਕ ਅਤੇ ਅੰਤਰਦ੍ਰਿਸ਼ਟੀ",
+    "personaIndexSubtitle": "ਤੁਹਾਡੇ ਪ੍ਰੋਫਾਈਲ ਅਨੁਸਾਰ ਢੁਕਵੀਂ ਮੌਸਮ ਜਾਣਕਾਰੀ",
+    "dynamicPriority": "ਗਤੀਸ਼ੀਲ ਤਰਜੀਹ",
+    "managePersonas": "ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਪਰਸੋਨਾ ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+    "nextWindow": "ਅਗਲਾ ਸਮਾਂ",
+    "avoid": "ਬਚੋ",
+    "score": "ਸਕੋਰ",
+    "notThisTime": "ਇਹ ਸਮਾਂ ਨਹੀਂ?",
+    "suggestAnother": "ਕੋਈ ਹੋਰ ਸੁਝਾਓ ▾",
+    "closeAlternative": "▲ ਬੰਦ ਕਰੋ",
+    "optionOf": "{total} ਵਿੱਚੋਂ ਵਿਕਲਪ {current}",
+    "nextBest": "ਅਗਲਾ ਵਧੀਆ",
+    "filters": {
+      "all": "ਸਾਰੇ",
+      "morning": "ਸਵੇਰ",
+      "afternoon": "ਦੁਪਹਿਰ",
+      "evening": "ਸ਼ਾਮ",
+      "reset": "ਰੀਸੈੱਟ"
+    },
+    "reasons": {
+      "coolAirBreeze": "ਠੰਢੀ ਹਵਾ ਅਤੇ ਸੁਹਾਵਣਾ ਝੋਕਾ",
+      "postSunsetCooling": "ਸੂਰਜ ਡੁੱਬਣ ਤੋਂ ਬਾਅਦ ਦੀ ਠੰਢਕ",
+      "lowestTemp": "ਦਿਨ ਦਾ ਸਭ ਤੋਂ ਘੱਟ ਤਾਪਮਾਨ",
+      "zeroSolarUv": "ਜ਼ੀਰੋ ਸੂਰਜੀ ਯੂਵੀ ਕਿਰਨਾਂ",
+      "cleanAirDispersed": "ਸਾਫ਼ ਹਵਾ ਅਤੇ ਘੱਟ ਪ੍ਰਦੂਸ਼ਣ",
+      "freshAir": "ਤਾਜ਼ੀ ਖੁੱਲ੍ਹੀ ਹਵਾ",
+      "clearRoads": "ਸਾਫ਼ ਸੜਕਾਂ ਅਤੇ ਸੁਖਾਲਾ ਸਫ਼ਰ",
+      "offshoreBreeze": "ਸਮੁੰਦਰੀ ਹਵਾ ਅਤੇ ਹਲਕੀ ਧੁੱਪ",
+      "deepSoilRoot": "ਮਿੱਟੀ ਦੀਆਂ ਜੜ੍ਹਾਂ ਤੱਕ ਨਮੀ",
+      "mildParkPlaytime": "ਪਾਰਕ ਵਿੱਚ ਖੇਡਣ ਲਈ ਢੁਕਵਾਂ ਮੌਸਮ",
+      "middayHeatUv": "ਦੁਪਹਿਰ ਦੀ ਤਿੱਖੀ ਗਰਮੀ ਅਤੇ ਯੂਵੀ",
+      "morningSmog": "ਸਵੇਰ ਦੀ ਧੁੰਦ / ਸਮੌਗ",
+      "rushHourTraffic": "ਰੁਝੇਵੇਂ ਦੇ ਸਮੇਂ ਟ੍ਰੈਫਿਕ ਦੇਰੀ",
+      "choppyWindsUv": "ਤੇਜ਼ ਹਵਾਵਾਂ ਅਤੇ ਤੇਜ਼ ਧੁੱਪ",
+      "highEvaporationHeat": "ਉੱਚ ਵਾਸ਼ਪੀਕਰਨ ਗਰਮੀ",
+      "peakHeatDirectUv": "ਸਖ਼ਤ ਗਰਮੀ ਅਤੇ ਸਿੱਧੀ ਧੁੱਪ"
+    }
+  },
+  "home": {
+    "glanceTitle": "ਲਾਈਵ ਵਾਯੂਮੰਡਲ ਸਮੀਖਿਆ",
+    "viewDashboard": "ਪੂਰਾ ਮੌਸਮ ਡੈਸ਼ਬੋਰਡ ਦੇਖੋ",
+    "p0Warning": "P0 ਗੰਭੀਰ ਚੇਤਾਵਨੀ",
+    "moisture": "ਨਮੀ",
+    "precipitation": "ਮੀਂਹ",
+    "moderate": "ਦਰਮਿਆਨਾ"
+  },
+  "weather": {
+    "windDirectionFormat": "{dir} ਦਿਸ਼ਾ ({deg}°)",
+    "windDirectionSimple": "{dir} ਦਿਸ਼ਾ",
+    "activityRings": {
+      "precipitationLabel": "ਮੀਂਹ ਦੀ ਮਾਤਰਾ",
+      "precipitationSub": "ਮੀਂਹ ਦੀ ਸੰਭਾਵਨਾ",
+      "humidityLabel": "ਨਮੀ",
+      "humiditySub": "ਵਾਯੂਮੰਡਲੀ ਨਮੀ",
+      "windLabel": "ਹਵਾ ਦੀ ਗਤੀ",
+      "windSub": "ਸਤਹੀ ਹਵਾ"
+    },
+    "forecastTabs": {
+      "temperature": "ਤਾਪਮਾਨ",
+      "precipitation": "ਮੀਂਹ",
+      "wind": "ਹਵਾ"
+    },
+    "humidityStatuses": {
+      "humid": "ਨਮੀ ਵਾਲਾ",
+      "comfortable": "ਸੁਹਾਵਣਾ",
+      "dry": "ਖੁਸ਼ਕ"
+    },
+    "uvLevels": {
+      "low": "ਘੱਟ ਖਤਰਾ",
+      "moderate": "ਦਰਮਿਆਨਾ ਖਤਰਾ",
+      "high": "ਉੱਚ ਖਤਰਾ",
+      "veryHigh": "ਬਹੁਤ ਜ਼ਿਆਦਾ",
+      "extreme": "ਬਹੁਤ ਤਿੱਖਾ",
+      "goodUv": "ਚੰਗੀ ਯੂਵੀ"
+    },
+    "directions": {
+      "N": "ਉੱਤਰ",
+      "S": "ਦੱਖਣ",
+      "E": "ਪੂਰਬ",
+      "W": "ਪੱਛਮ",
+      "NE": "ਉੱਤਰ-ਪੂਰਬ",
+      "NW": "ਉੱਤਰ-ਪੱਛਮ",
+      "SE": "ਦੱਖਣ-ਪੂਰਬ",
+      "SW": "ਦੱਖਣ-ਪੱਛਮ",
+      "NNE": "ਉੱਤਰ-ਉੱਤਰਪੂਰਬ",
+      "ENE": "ਪੂਰਬ-ਉੱਤਰਪੂਰਬ",
+      "ESE": "ਪੂਰਬ-ਦੱਖਣਪੂਰਬ",
+      "SSE": "ਦੱਖਣ-ਦੱਖਣਪੂਰਬ",
+      "SSW": "ਦੱਖਣ-ਦੱਖਣਪੱਛਮ",
+      "WSW": "ਪੱਛਮ-ਦੱਖਣਪੱਛਮ",
+      "WNW": "ਪੱਛਮ-ਉੱਤਰਪੱਛਮ",
+      "NNW": "ਉੱਤਰ-ਉੱਤਰਪੱਛਮ"
+    },
+    "conditions": {
+      "clearDay": "ਸਾਫ਼ ਅਸਮਾਨ • ਧੁੱਪ",
+      "clearNight": "ਸਾਫ਼ ਰਾਤ • ਤਾਰੇ",
+      "partlyCloudyDay": "ਅੰਸ਼ਕ ਤੌਰ 'ਤੇ ਬੱਦਲਵਾਈ",
+      "partlyCloudyNight": "ਅੰਸ਼ਕ ਬੱਦਲਵਾਈ ਰਾਤ",
+      "overcast": "ਭਾਰੀ ਬੱਦਲਵਾਈ",
+      "fog": "ਧੁੰਦ",
+      "drizzle": "ਬੂੰਦਾਬਾਂਦੀ",
+      "rain": "ਮੀਂਹ",
+      "showers": "ਮੀਂਹ ਦੇ ਛਿੱਟੇ",
+      "thunderstorm": "ਤੂਫ਼ਾਨ ਦੀ ਚੇਤਾਵਨੀ",
+      "snow": "ਬਰਫ਼ਬਾਰੀ",
+      "clear": "ਸਾਫ਼ ਅਸਮਾਨ",
+      "mainlyClear": "ਮੁੱਖ ਤੌਰ 'ਤੇ ਸਾਫ਼",
+      "partlyCloudy": "ਅੰਸ਼ਕ ਤੌਰ 'ਤੇ ਬੱਦਲਵਾਈ"
+    },
+    "title": "ਵਾਯੂਮੰਡਲ ਵਿਸ਼ਲੇਸ਼ਣ",
+    "subtitle": "ਲਾਈਵ ਸੈਂਸਰ ਡਾਟਾ",
+    "windGusts": "ਹਵਾ ਦੇ ਝੱਖੜ",
+    "pressure": "ਹਵਾ ਦਾ ਦਬਾਅ",
+    "cloudCover": "ਬੱਦਲਾਂ ਦੀ ਚਾਦਰ",
+    "surfaceMsl": "ਸਮੁੰਦਰ ਤਲ ਦਬਾਅ",
+    "overcastIndex": "ਬੱਦਲਵਾਈ ਸੂਚਕਾਂਕ",
+    "celestialTitle": "ਸੂਰਜ ਅਤੇ ਖਗੋਲੀ ਚੱਕਰ",
+    "celestialSubtitle": "ਸੂਰਜੀ ਸਮਾਂ ਅਤੇ ਦਿਨ ਦੀ ਲੰਬਾਈ",
+    "sunrise": "ਸੂਰਜ ਚੜ੍ਹਨਾ",
+    "sunset": "ਸੂਰਜ ਡੁੱਬਣਾ",
+    "daylightDuration": "ਦਿਨ ਦੀ ਲੰਬਾਈ"
+  },
+  "chatbot": {
+    "title": "ਮੌਸਮ AI",
+    "badge": "ਲਾਈਵ ਟੈਲੀਮੈਟਰੀ",
+    "welcomeMsg": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਤੁਹਾਡਾ ਮੌਸਮ ਸਹਾਇਕ ਹਾਂ। ਮੈਨੂੰ ਮੌਜੂਦਾ ਮੀਂਹ, ਆਉਣ ਵਾਲੀ ਭਵਿੱਖਬਾਣੀ ਜਾਂ ਕਸਰਤ ਬਾਰੇ ਕੁਝ ਵੀ ਪੁੱਛੋ!",
+    "placeholder": "ਲਾਈਵ ਮੀਂਹ, ਭਵਿੱਖਬਾਣੀ ਜਾਂ ਕਿਸੇ ਵੀ ਸ਼ਹਿਰ ਦੇ ਮੌਸਮ ਬਾਰੇ ਪੁੱਛੋ...",
+    "send": "ਭੇਜੋ",
+    "helper": "ਮੌਜੂਦਾ ਹਾਲਾਤ ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਦੀ ਸੰਭਾਵਨਾ ਨੂੰ ਸਪੱਸ਼ਟ ਰੂਪ ਵਿੱਚ ਵੱਖ ਕਰਦਾ ਹੈ। ਭੇਜਣ ਲਈ Enter ਦਬਾਓ।",
+    "analyzing": "ਲਾਈਵ ਮੌਸਮ ਡੇਟਾ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+    "rainingNow": "ਹੁਣ ਮੀਂਹ ਪੈ ਰਿਹਾ ਹੈ",
+    "notRainingNow": "ਹੁਣ ਮੀਂਹ ਨਹੀਂ ਪੈ ਰਿਹਾ",
+    "rainForecast": "ਮੀਂਹ ਦੀ ਭਵਿੱਖਬਾਣੀ",
+    "confirmLocation": "ਸਥਾਨ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ ਜਾਂ ਬਦਲੋ",
+    "locationDesc": "ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਮੌਸਮ ਤੁਹਾਡੀ ਖਿੜਕੀ ਦੇ ਬਾਹਰਲੇ ਹਾਲਾਤਾਂ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੈ",
+    "useGps": "ਆਟੋ-ਡਿਟੈਕਟ ਕੀਤੇ GPS ਸਥਾਨ ਦੀ ਵਰਤੋਂ ਕਰੋ"
+  },
+  "settings": {
+    "title": "ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ",
+    "subtitle": "ਤਰਜੀਹਾਂ, ਖੇਤਰੀ ਭਾਸ਼ਾਵਾਂ ਅਤੇ ਸਿਹਤ ਪ੍ਰੋਫਾਈਲਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
+    "accountTitle": "ਖਾਤਾ ਪ੍ਰੋਫਾਈਲ",
+    "authenticated": "ਪ੍ਰਮਾਣਿਤ ਖਾਤਾ",
+    "guest": "ਮਹਿਮਾਨ ਸੈਸ਼ਨ",
+    "authState": "ਪ੍ਰਮਾਣਿਕਤਾ ਸਥਿਤੀ:",
+    "guestDesc": "ਸਥਾਨਕ ਸੈਸ਼ਨ (ਲੌਗਇਨ ਦੀ ਲੋੜ ਨਹੀਂ)",
+    "signOut": "ਸਾਈਨ ਆਊਟ",
+    "signIn": "ਸਾਈਨ ਇਨ",
+    "languageSection": {
+      "title": "ਭਾਸ਼ਾ ਅਤੇ ਖੇਤਰੀ ਚੋਣ",
+      "subtitle": "RTL ਸਹਾਇਤਾ ਨਾਲ ਭਾਰਤ ਦੀਆਂ ਪ੍ਰਮੁੱਖ ਅਧਿਕਾਰਤ ਭਾਸ਼ਾਵਾਂ ਵਿੱਚ ਉਪਲਬਧ",
+      "current": "ਮੌਜੂਦਾ ਭਾਸ਼ਾ",
+      "switchBtn": "ਭਾਸ਼ਾ ਬਦਲੋ",
+      "phase1": "ਪੜਾਅ 1: ਪ੍ਰਮੁੱਖ ਭਾਸ਼ਾਵਾਂ",
+      "phase2": "ਪੜਾਅ 2: ਹੋਰ ਭਾਸ਼ਾਵਾਂ",
+      "aiBadge": "AI ਚੈਟਬੋਟ ਸਮਰਥਿਤ",
+      "rtlBadge": "ਸੱਜੇ ਤੋਂ ਖੱਬੇ ਲੇਆਉਟ"
+    },
+    "units": {
+      "title": "ਡਿਸਪਲੇਅ ਇਕਾਈਆਂ",
+      "subtitle": "ਤਾਪਮਾਨ ਸਕੇਲ ਅਤੇ ਹਵਾ ਦੀ ਗਤੀ ਇਕਾਈਆਂ ਨੂੰ ਅਨੁਕੂਲਿਤ ਕਰੋ",
+      "temperature": "ਤਾਪਮਾਨ ਸਕੇਲ",
+      "wind": "ਹਵਾ ਦੀ ਗਤੀ ਫਾਰਮੈਟ"
+    },
+    "personasTitle": "ਸਰਗਰਮ ਪ੍ਰੋਫਾਈਲਾਂ",
+    "personasSubtitle": "ਹੋਮਪੇਜ ਲਈ ਵੱਧ ਤੋਂ ਵੱਧ 3 ਤਰਜੀਹੀ ਪ੍ਰੋਫਾਈਲਾਂ ਚੁਣੋ ({current}/3 ਚੁਣਿਆ)",
+    "maxThreeAllowed": "ਵੱਧ ਤੋਂ ਵੱਧ 3 ਮਨਜ਼ੂਰ",
+    "maxThreeBanner": "ਵੱਧ ਤੋਂ ਵੱਧ 3 ਪ੍ਰੋਫਾਈਲਾਂ ਦੀ ਆਗਿਆ ਹੈ",
+    "maxThreeBannerDesc": "ਤੁਸੀਂ ਵੱਧ ਤੋਂ ਵੱਧ 3 ਪ੍ਰੋਫਾਈਲਾਂ ਚੁਣ ਸਕਦੇ ਹੋ। ਨਵਾਂ ਜੋੜਨ ਲਈ ਪਹਿਲਾਂ ਚੁਣਿਆ ਹਟਾਓ।",
+    "dismiss": "ਰੱਦ ਕਰੋ",
+    "saveSuccess": "ਤਰਜੀਹਾਂ ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਡੇਟ ਕੀਤੀਆਂ ਗਈਆਂ! ਹੋਮਪੇਜ ਕਾਰਡ ਤੁਰੰਤ ਮੁੜ ਕ੍ਰਮਬੱਧ ਹੋਣਗੇ।"
+  }
+}

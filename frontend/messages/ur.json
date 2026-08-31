@@ -1,0 +1,274 @@
+{
+  "nav": {
+    "home": "ہوم فیڈ",
+    "weather": "موسم",
+    "map": "نقشہ",
+    "chatbot": "اے آئی چیٹ بوٹ",
+    "settings": "ترتیبات"
+  },
+  "common": {
+    "today": "آج",
+    "tomorrow": "کل",
+    "tonight": "آج رات",
+    "am": "صبح",
+    "pm": "شام",
+    "appName": "موسم",
+    "loading": "لوڈ ہو رہا ہے...",
+    "save": "ترجیحات محفوظ کریں",
+    "saved": "کامیابی سے محفوظ ہو گیا!",
+    "cancel": "منسوخ کریں",
+    "close": "بند کریں",
+    "search": "تلاش کریں...",
+    "location": "مقام",
+    "currentLoc": "موجودہ مقام",
+    "gpsActive": "جی پی ایس فعال ہے",
+    "error": "کچھ غلط ہو گیا",
+    "retry": "دوبارہ کوشش کریں",
+    "language": "زبان",
+    "selectLanguage": "زبان منتخب کریں",
+    "allRightsReserved": "جملہ حقوق محفوظ ہیں۔",
+    "live": "براہ راست",
+    "high": "زیادہ سے زیادہ",
+    "low": "کم سے کم",
+    "feelsLike": "محسوس شدہ",
+    "direction": "سمت"
+  },
+  "personas": {
+    "health": {
+      "title": "صحت سے باخبر",
+      "shortTitle": "صحت",
+      "subtitle": "AQI انڈیکس، UV ریڈی ایشن، الرجی الرٹ اور نمی کی تفصیلات"
+    },
+    "fitness": {
+      "title": "فٹنس کے شوقین",
+      "shortTitle": "رنر",
+      "subtitle": "ورزش کا بہترین وقت، شدید گرمی کا الرٹ اور بارش کی پیش گوئی"
+    },
+    "beach": {
+      "title": "ساحل سمندر / سرفنگ",
+      "shortTitle": "ساحل",
+      "subtitle": "مد و جزر چارٹ، لہروں کی اونچائی، سمندری درجہ حرارت اور ہوا کی سمت"
+    },
+    "traveler": {
+      "title": "مسافر",
+      "shortTitle": "سفر",
+      "subtitle": "کئی شہروں کا موسم، پرواز کے لیے موسمی خطرات اور تجاویز"
+    },
+    "agriculture": {
+      "title": "کسان / زرعی ماہر",
+      "shortTitle": "زراعت",
+      "subtitle": "مٹی کی نمی، بخارات بننے کی شرح اور اسپرے کا بہترین وقت"
+    },
+    "family": {
+      "title": "خاندان اور بچے",
+      "shortTitle": "خاندان",
+      "subtitle": "پارک کا موسم، ہفتہ وار پیش گوئی اور کھیل کے میدان کی سہولت"
+    },
+    "commute": {
+      "title": "روزانہ سفر کرنے والے",
+      "shortTitle": "سفر",
+      "subtitle": "ٹریفک موسمی خطرہ، سڑک کی گرفت اور حد نگاہ"
+    },
+    "event": {
+      "title": "تقریب کے منصوبہ ساز",
+      "shortTitle": "تقریب",
+      "subtitle": "10 دن کی پیش گوئی، بارش کا امکان اور بہترین اوقات"
+    }
+  },
+  "metrics": {
+    "temperature": "درجہ حرارت",
+    "humidity": "نمی",
+    "wind": "ہوا کی رفتار",
+    "rain": "بارش کا امکان",
+    "uv": "یو وی انڈیکس",
+    "aqi": "ہوا کا معیار",
+    "notes": {
+      "warm": "گرم حالات",
+      "idealThermal": "معتدل درجہ حرارت",
+      "elevatedMoisture": "زیادہ نمی",
+      "comfortableMoisture": "خوشگوار نمی",
+      "moderateWind": "ہلکی مزاحمت",
+      "lightWind": "ہلکی ٹھنڈی ہوا",
+      "scatteredRain": "ہلکی بارش کا امکان",
+      "dryConditions": "خشک موسم متوقع",
+      "highUv": "شدید یو وی شعاعیں",
+      "safeUv": "محفوظ یو وی لیول",
+      "moderateAqi": "درمیانہ فضائی معیار",
+      "cleanAqi": "صاف ستھری ہوا"
+    }
+  },
+  "insights": {
+    "headerSuffix": "بصیرت",
+    "aiPowered": "اے آئی بااختیار",
+    "personaIndexTitle": "پرسونا انڈیکس اور بصیرت",
+    "personaIndexSubtitle": "آپ کے لیے مخصوص اور درست موسمی معلومات",
+    "dynamicPriority": "متحرک ترجیح",
+    "managePersonas": "ترتیبات میں پروفائلز تبدیل کریں",
+    "nextWindow": "اگلا وقت",
+    "avoid": "پرہیز کریں",
+    "score": "اسکور",
+    "notThisTime": "یہ وقت نہیں؟",
+    "suggestAnother": "کوئی دوسرا وقت تجویز کریں ▾",
+    "closeAlternative": "▲ بند کریں",
+    "optionOf": "{total} میں سے آپشن {current}",
+    "nextBest": "اگلا بہترین",
+    "filters": {
+      "all": "سب",
+      "morning": "صبح",
+      "afternoon": "دوپہر",
+      "evening": "شام",
+      "reset": "دوبارہ ترتیب دیں"
+    },
+    "reasons": {
+      "coolAirBreeze": "ٹھنڈی ہوا اور خوشگوار جھونکے",
+      "postSunsetCooling": "غروب آفتاب کے بعد کی ٹھنڈک",
+      "lowestTemp": "دن کا کم ترین درجہ حرارت",
+      "zeroSolarUv": "صفر یو وی ریڈی ایشن",
+      "cleanAirDispersed": "صاف ہوا اور کم آلودگی",
+      "freshAir": "تازہ ہوا",
+      "clearRoads": "صاف سڑکیں اور آسان سفر",
+      "offshoreBreeze": "ساحلی ہوا اور ہلکی دھوپ",
+      "deepSoilRoot": "مٹی کی اندرونی نمی",
+      "mildParkPlaytime": "پارک میں کھیلنے کے لیے سازگار موسم",
+      "middayHeatUv": "دوپہر کی شدید گرمی اور یو وی",
+      "morningSmog": "صبح کی دھند اور اسموگ",
+      "rushHourTraffic": "رش کے اوقات کی ٹریفک",
+      "choppyWindsUv": "تیز ہوائیں اور تپتی دھوپ",
+      "highEvaporationHeat": "زیادہ بخارات کی گرمی",
+      "peakHeatDirectUv": "شدید گرمی اور براہ راست دھوپ"
+    }
+  },
+  "home": {
+    "glanceTitle": "براہ راست موسمی جائزہ",
+    "viewDashboard": "مکمل موسم کا ڈیش بورڈ دیکھیں",
+    "p0Warning": "P0 شدید وارننگ",
+    "moisture": "نمی",
+    "precipitation": "بارش",
+    "moderate": "درمیانہ"
+  },
+  "weather": {
+    "windDirectionFormat": "{dir} سمت ({deg}°)",
+    "windDirectionSimple": "{dir} سمت",
+    "activityRings": {
+      "precipitationLabel": "بارش کا تناسب",
+      "precipitationSub": "بارش کا امکان",
+      "humidityLabel": "نمی",
+      "humiditySub": "فضائی نمی",
+      "windLabel": "ہوا کی رفتار",
+      "windSub": "سطحی ہوائیں"
+    },
+    "forecastTabs": {
+      "temperature": "درجہ حرارت",
+      "precipitation": "بارش",
+      "wind": "ہوا"
+    },
+    "humidityStatuses": {
+      "humid": "مرطوب",
+      "comfortable": "خوشگوار",
+      "dry": "خشک"
+    },
+    "uvLevels": {
+      "low": "کم خطرہ",
+      "moderate": "معتدل خطرہ",
+      "high": "زیادہ خطرہ",
+      "veryHigh": "بہت زیادہ خطرہ",
+      "extreme": "شدید",
+      "goodUv": "محفوظ یو وی"
+    },
+    "directions": {
+      "N": "شمال",
+      "S": "جنوب",
+      "E": "مشرق",
+      "W": "مغرب",
+      "NE": "شمال مشرق",
+      "NW": "شمال مغرب",
+      "SE": "جنوب مشرق",
+      "SW": "جنوب مغرب",
+      "NNE": "شمال-شمال مشرق",
+      "ENE": "مشرق-شمال مشرق",
+      "ESE": "مشرق-جنوب مشرق",
+      "SSE": "جنوب-جنوب مشرق",
+      "SSW": "جنوب-جنوب مغرب",
+      "WSW": "مغرب-جنوب مغرب",
+      "WNW": "مغرب-شمال مغرب",
+      "NNW": "شمال-شمال مغرب"
+    },
+    "conditions": {
+      "clearDay": "صاف آسمان • دھوپ",
+      "clearNight": "صاف رات • تارے",
+      "partlyCloudyDay": "جزوی ابر آلود",
+      "partlyCloudyNight": "جزوی ابر آلود رات",
+      "overcast": "مکمل ابر آلود",
+      "fog": "دھند",
+      "drizzle": "بونداباندی",
+      "rain": "بارش",
+      "showers": "تیز بارش کی پھوار",
+      "thunderstorm": "گرج چمک کے ساتھ طوفان کی وارننگ",
+      "snow": "برف باری",
+      "clear": "صاف آسمان",
+      "mainlyClear": "زیادہ تر صاف",
+      "partlyCloudy": "جزوی ابر آلود"
+    },
+    "title": "فضائی تشخیص",
+    "subtitle": "براہ راست سینسر ڈیٹا",
+    "windGusts": "ہوا کے جھونکے",
+    "pressure": "ہوا کا دباؤ",
+    "cloudCover": "بادلوں کا تناسب",
+    "surfaceMsl": "سطح سمندر کا دباؤ",
+    "overcastIndex": "ابر آلودگی انڈیکس",
+    "celestialTitle": "سورج اور فلکیاتی دورانیہ",
+    "celestialSubtitle": "شمسی وقت اور دن کی طوالت",
+    "sunrise": "طلوع آفتاب",
+    "sunset": "غروب آفتاب",
+    "daylightDuration": "دن کا دورانیہ"
+  },
+  "chatbot": {
+    "title": "موسم اے آئی",
+    "badge": "براہ راست ٹیلی میٹری",
+    "welcomeMsg": "سلام! میں آپ کا موسم ساتھی ہوں۔ موجودہ بارش، آنے والی پیش گوئی یا لباس اور ورزش سے متعلق کچھ بھی پوچھیں!",
+    "placeholder": "موجودہ بارش، پیش گوئی یا کسی بھی شہر کے موسم کے بارے میں پوچھیں...",
+    "send": "بھیجیں",
+    "helper": "موجودہ مشاہدات اور پیش گوئی کے امکانات میں واضح فرق کرتا ہے۔ بھیجنے کے لیے Enter دبائیں۔",
+    "analyzing": "براہ راست موسمی ڈیٹا کا تجزیہ جاری ہے...",
+    "rainingNow": "اس وقت بارش ہو رہی ہے",
+    "notRainingNow": "اس وقت بارش نہیں ہو رہی",
+    "rainForecast": "بارش کی پیش گوئی",
+    "confirmLocation": "مقام کی تصدیق یا تبدیلی کریں",
+    "locationDesc": "یقینی بنائیں کہ موسم آپ کی کھڑکی کے باہر کی صورتحال سے میل کھاتا ہو",
+    "useGps": "خودکار جی پی ایس مقام استعمال کریں"
+  },
+  "settings": {
+    "title": "سسٹم کی ترتیبات",
+    "subtitle": "ترجیحات، علاقائی زبانیں اور صحت کے پروفائلز کا نظم کریں",
+    "accountTitle": "اکاؤنٹ پروفائل",
+    "authenticated": "تصدیق شدہ اکاؤنٹ",
+    "guest": "مہمان سیشن",
+    "authState": "تصدیقی حیثیت:",
+    "guestDesc": "مقامی سیشن (لاگ ان کی ضرورت نہیں)",
+    "signOut": "سائن آؤٹ",
+    "signIn": "سائن ان",
+    "languageSection": {
+      "title": "زبان اور علاقائی ترجیحات",
+      "subtitle": "RTL سپورٹ کے ساتھ بھارت کی اہم سرکاری زبانوں میں دستیاب",
+      "current": "موجودہ زبان",
+      "switchBtn": "زبان تبدیل کریں",
+      "phase1": "مرحلہ 1: بڑی زبانیں",
+      "phase2": "مرحلہ 2: دیگر شیڈول شدہ زبانیں",
+      "aiBadge": "اے آئی چیٹ بوٹ سپورٹڈ",
+      "rtlBadge": "دائیں سے بائیں لے آؤٹ"
+    },
+    "units": {
+      "title": "پیمائش کی اکائیاں",
+      "subtitle": "درجہ حرارت اور ہوا کی رفتار کی اکائیوں کو اپنی مرضی کے مطابق بنائیں",
+      "temperature": "درجہ حرارت کا پیمانہ",
+      "wind": "ہوا کی رفتار کی اکائی"
+    },
+    "personasTitle": "فعال پرسونا",
+    "personasSubtitle": "ہوم پیج کے لیے زیادہ سے زیادہ 3 ترجیحی پروفائلز منتخب کریں ({current}/3 منتخب شدہ)",
+    "maxThreeAllowed": "زیادہ سے زیادہ 3 کی اجازت",
+    "maxThreeBanner": "زیادہ سے زیادہ 3 پروفائلز کی اجازت ہے",
+    "maxThreeBannerDesc": "آپ زیادہ سے زیادہ 3 پروفائلز منتخب کر سکتے ہیں۔ نیا شامل کرنے کے لیے پہلے سے منتخب کردہ ایک کو ہٹائیں۔",
+    "dismiss": "رد کریں",
+    "saveSuccess": "ترجیحات کامیابی سے اپ ڈیٹ ہو گئیں! ہوم پیج کارڈز فوری طور پر تبدیل ہو جائیں گے۔"
+  }
+}

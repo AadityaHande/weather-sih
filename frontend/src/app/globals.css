@@ -1,0 +1,695 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   iOS / Apple design tokens
+   --------------------------------------------------------------------------
+   Registered with Tailwind v4's @theme so they are usable as utilities
+   (`bg-ios-fill`, `text-ios-label-2`, `rounded-ios-card`, `ease-ios`) as well
+   as raw `var()` values in the component classes further down.
+
+   Values are Apple's published system colours (Human Interface Guidelines),
+   not approximations — the dark palette in particular (#1c1c1e, #2c2c2e,
+   #8e8e93) was already used ad hoc throughout the app, so this consolidates it
+   into one place instead of repeating hex literals in every className.
+   ========================================================================== */
+@theme {
+  /* Accent — systemBlue. The app's sky-600 (#0284c7) reads slightly teal next
+     to real iOS chrome; systemBlue is what native controls use. */
+  --color-ios-blue: #007aff;
+  --color-ios-blue-dark: #0a84ff;
+
+  /* Backgrounds: "grouped" is the inset-list background every iOS settings /
+     weather screen uses — page is darker than the cards sitting on it. */
+  --color-ios-grouped: #f2f2f7;
+  --color-ios-grouped-dark: #000000;
+  --color-ios-surface: #ffffff;
+  --color-ios-surface-dark: #1c1c1e;
+  --color-ios-fill: rgba(120, 120, 128, 0.12);
+  --color-ios-fill-dark: rgba(120, 120, 128, 0.24);
+
+  /* Labels — four levels of hierarchy, as iOS defines them. */
+  --color-ios-label: #000000;
+  --color-ios-label-2: #3c3c4399;
+  --color-ios-label-3: #3c3c434d;
+  --color-ios-label-dark: #ffffff;
+  --color-ios-label-2-dark: #ebebf599;
+  --color-ios-label-3-dark: #ebebf54d;
+
+  /* Semantic */
+  --color-ios-green: #34c759;
+  --color-ios-orange: #ff9500;
+  --color-ios-red: #ff3b30;
+  --color-ios-yellow: #ffcc00;
+  --color-ios-purple: #af52de;
+  --color-ios-teal: #30b0c7;
+
+  /* Radii — iOS squircles are larger than typical web cards. */
+  --radius-ios-sm: 10px;
+  --radius-ios: 14px;
+  --radius-ios-card: 22px;
+  --radius-ios-lg: 28px;
+
+  /* Apple's standard interactive curve: fast out, long settle. */
+  --ease-ios: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-ios-out: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+:root {
+  --background: #f2f2f7;
+  --foreground: #000000;
+  --primary-sky: #007aff;
+  --primary-sky-light: #e0f2fe;
+
+  /* Hairline separators: iOS uses a sub-pixel line with alpha, never a solid
+     grey border. Rendered at 0.5px where the display supports it. */
+  --ios-separator: rgba(60, 60, 67, 0.29);
+  --ios-separator-opaque: #c6c6c8;
+
+  /* Elevation: very soft and neutral. Coloured shadows read as Material, not iOS. */
+  --ios-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px -8px rgba(0, 0, 0, 0.08);
+  --ios-shadow-raised: 0 2px 6px rgba(0, 0, 0, 0.06), 0 16px 40px -12px rgba(0, 0, 0, 0.14);
+
+  /* Safe-area insets, exposed as variables so layout can consume them without
+     repeating the env() fallback dance. Matters for the Capacitor build and
+     for the PWA running full-screen on a notched device. */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary-sky: #0a84ff;
+  --ios-separator: rgba(84, 84, 88, 0.65);
+  --ios-separator-opaque: #38383a;
+  --ios-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 8px 24px -8px rgba(0, 0, 0, 0.7);
+  --ios-shadow-raised: 0 2px 8px rgba(0, 0, 0, 0.6), 0 16px 40px -12px rgba(0, 0, 0, 0.85);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  /* -apple-system first so iOS/macOS render in real SF Pro; Geist is the
+     cross-platform stand-in everywhere else. */
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", var(--font-geist-sans),
+    ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+  /* iOS typographic defaults: optical sizing on, and the tighter tracking Apple
+     applies at body sizes. */
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* Stops the grey flash on tap in WebViews and mobile Safari. */
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.25s var(--ease-ios-out), color 0.25s var(--ease-ios-out);
+}
+
+/* Keeps the browser's rubber-band from competing with PullToRefresh. */
+html,
+body {
+  overscroll-behavior-y: contain;
+}
+
+.dark body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   iOS component classes
+   --------------------------------------------------------------------------
+   Plain CSS rather than @utility so they can compose several properties
+   (material blur needs the -webkit- prefix for Safari/WebView) and be applied
+   alongside existing Tailwind classes without a rewrite of every element.
+   ========================================================================== */
+
+/* Translucent "material" — the single most recognisable iOS surface treatment.
+   The saturate() boost is what makes content behind it glow rather than grey. */
+.ios-material {
+  background-color: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.dark .ios-material {
+  background-color: rgba(30, 30, 32, 0.72);
+}
+
+/* Sticky nav bar: transparent until content scrolls under it. */
+.ios-nav {
+  background-color: rgba(242, 242, 247, 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.5px solid transparent;
+  transition: border-color 0.2s var(--ease-ios-out), background-color 0.2s var(--ease-ios-out);
+}
+
+.dark .ios-nav {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.ios-nav[data-scrolled="true"] {
+  border-bottom-color: var(--ios-separator);
+}
+
+/* Inset grouped card — the base surface for almost everything on screen. */
+.ios-card {
+  background-color: var(--color-ios-surface);
+  border-radius: var(--radius-ios-card);
+  box-shadow: var(--ios-shadow-card);
+}
+
+.dark .ios-card {
+  background-color: var(--color-ios-surface-dark);
+  box-shadow: var(--ios-shadow-card);
+}
+
+.ios-card-raised {
+  box-shadow: var(--ios-shadow-raised);
+}
+
+/* Secondary fill, for the tiles that sit *inside* a card. */
+.ios-inset {
+  background-color: var(--color-ios-fill);
+  border-radius: var(--radius-ios);
+}
+
+.dark .ios-inset {
+  background-color: var(--color-ios-fill-dark);
+}
+
+/* True hairline separator, including the 0.5px form on retina displays. */
+.ios-separator {
+  border-color: var(--ios-separator);
+  border-width: 1px;
+}
+
+@media (min-resolution: 2dppx) {
+  .ios-separator {
+    border-width: 0.5px;
+  }
+}
+
+/* Row divider for grouped lists — inset from the leading edge like iOS. */
+.ios-divide > * + * {
+  border-top: 0.5px solid var(--ios-separator);
+}
+
+/* Press feedback. iOS scales and dims on touch-down and releases with a spring;
+   this is the difference between a web button and one that feels native. */
+.ios-pressable {
+  transition: transform 0.24s var(--ease-ios), opacity 0.16s linear,
+    background-color 0.16s linear;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.ios-pressable:active {
+  transform: scale(0.96);
+  opacity: 0.75;
+}
+
+/* Larger surfaces should barely move — a full card scaling 4% looks broken. */
+.ios-pressable-card:active {
+  transform: scale(0.985);
+  opacity: 0.9;
+}
+
+/* Type ramp, matching iOS text styles. */
+.ios-large-title {
+  font-size: 2.125rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.024em;
+}
+
+.ios-title {
+  font-size: 1.375rem;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.019em;
+}
+
+.ios-headline {
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  font-weight: 600;
+  letter-spacing: -0.011em;
+}
+
+.ios-subhead {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: -0.006em;
+}
+
+.ios-footnote {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  letter-spacing: 0;
+  color: var(--color-ios-label-2);
+}
+
+.dark .ios-footnote {
+  color: var(--color-ios-label-2-dark);
+}
+
+/* Section header above a grouped list: uppercase, tertiary, tight. */
+.ios-section-header {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ios-label-2);
+}
+
+.dark .ios-section-header {
+  color: var(--color-ios-label-2-dark);
+}
+
+/* Tabular figures so temperatures and AQI values stop jittering as they tick. */
+.ios-numeric {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Safe-area padding helpers for the Capacitor / standalone-PWA cases. */
+.ios-safe-top {
+  padding-top: calc(var(--safe-top) + 0.5rem);
+}
+
+.ios-safe-bottom {
+  padding-bottom: calc(var(--safe-bottom) + 0.5rem);
+}
+
+/* Skeleton shimmer. A left-to-right sheen reads as "loading" far more clearly
+   than an opacity pulse, and matches the iOS placeholder treatment. Applied to
+   the element itself — the sheen is drawn on ::after so the element keeps its
+   own background fill underneath. */
+@keyframes ios-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.ios-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.ios-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  animation: ios-shimmer 1.5s var(--ease-ios-out) infinite;
+}
+
+.dark .ios-shimmer::after {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+}
+
+/* Respect the OS "reduce motion" setting — required for accessibility, and iOS
+   users who enable it expect it to be honoured. */
+@media (prefers-reduced-motion: reduce) {
+  .ios-shimmer::after,
+  .animate-pulse,
+  .animate-spin {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+
+  .ios-pressable,
+  .ios-pressable-card {
+    transition: none;
+  }
+
+  .ios-pressable:active,
+  .ios-pressable-card:active {
+    transform: none;
+  }
+}
+
+
+/* Custom scrollbar — iOS/macOS overlay style: no track, translucent thumb. */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(60, 60, 67, 0.28);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(235, 235, 245, 0.28);
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(60, 60, 67, 0.5);
+  background-clip: content-box;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(235, 235, 245, 0.45);
+  background-clip: content-box;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Leaflet container fixes */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 500px !important;
+  z-index: 0 !important;
+  background-color: #f2f2f7 !important;
+  font-family: inherit !important;
+}
+
+.dark .leaflet-container {
+  background-color: #1c1c1e !important;
+}
+
+.leaflet-tile {
+  visibility: visible !important;
+}
+
+/* Zoom control restyled as an iOS segmented material control. */
+.leaflet-control-zoom {
+  border: 0.5px solid var(--ios-separator) !important;
+  box-shadow: var(--ios-shadow-card) !important;
+  border-radius: var(--radius-ios) !important;
+  overflow: hidden !important;
+  margin-bottom: 24px !important;
+  margin-right: 16px !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.leaflet-control-zoom a {
+  background-color: rgba(255, 255, 255, 0.78) !important;
+  color: #000000 !important;
+  border-bottom: 0.5px solid var(--ios-separator) !important;
+  transition: background-color 0.16s linear !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: var(--color-ios-blue) !important;
+}
+
+.dark .leaflet-control-zoom a {
+  background-color: rgba(30, 30, 32, 0.78) !important;
+  color: #ffffff !important;
+}
+
+.dark .leaflet-control-zoom a:hover {
+  background-color: rgba(44, 44, 46, 0.95) !important;
+  color: var(--color-ios-blue-dark) !important;
+}
+
+/* Leaflet popups as iOS material cards rather than default white boxes. */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background-color: rgba(255, 255, 255, 0.82) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  color: #000000 !important;
+  border-radius: var(--radius-ios) !important;
+  box-shadow: var(--ios-shadow-raised) !important;
+}
+
+.dark .leaflet-popup-content-wrapper,
+.dark .leaflet-popup-tip {
+  background-color: rgba(30, 30, 32, 0.86) !important;
+  color: #ffffff !important;
+}
+
+/* Engine Capabilities Hover Effect */
+.features-grid .feature-card {
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, filter, opacity;
+}
+
+.features-grid .feature-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.15);
+  z-index: 10;
+}
+
+.features-grid:hover > .feature-card:not(:hover) {
+  filter: blur(3px);
+  transform: scale(0.96);
+  opacity: 0.7;
+}
+
+/* ========================================================================== */
+/* DaisyUI Chat Component Styles                                             */
+/* ========================================================================== */
+.chat {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --mask-chat: url("data:image/svg+xml,%3csvg width='13' height='13' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='M0 11.5004C0 13.0004 2 13.0004 2 13.0004H12H13V0.00036329L12.5 0C12.5 0 11.977 2.09572 11.8581 2.50033C11.6075 3.35237 10.9149 4.22374 9 5.50036C6 7.50036 0 10.0004 0 11.5004Z'/%3e%3c/svg%3e");
+}
+
+.chat-start {
+  place-items: start;
+  grid-template-columns: auto 1fr;
+}
+
+.chat-end {
+  place-items: end;
+  grid-template-columns: 1fr auto;
+}
+
+.chat-image {
+  grid-row-start: 2;
+  align-self: end;
+  margin-bottom: 0.125rem;
+}
+
+.chat-start .chat-image {
+  grid-column-start: 1;
+}
+
+.chat-end .chat-image {
+  grid-column-start: 2;
+}
+
+.chat-header {
+  grid-row-start: 1;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-bottom: 0.25rem;
+  color: #64748b;
+}
+
+.dark .chat-header {
+  color: #94a3b8;
+}
+
+.chat-start .chat-header {
+  grid-column-start: 2;
+}
+
+.chat-end .chat-header {
+  grid-column-start: 1;
+  text-align: right;
+}
+
+.chat-footer {
+  grid-row-start: 3;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-top: 0.25rem;
+  color: #94a3b8;
+}
+
+.dark .chat-footer {
+  color: #64748b;
+}
+
+.chat-start .chat-footer {
+  grid-column-start: 2;
+}
+
+.chat-end .chat-footer {
+  grid-column-start: 1;
+  text-align: right;
+}
+
+.chat-bubble {
+  position: relative;
+  display: block;
+  width: fit-content;
+  padding: 0.5rem 0.875rem;
+  /* iOS Messages bubbles are near-capsule at single-line height. */
+  border-radius: 1.25rem;
+  min-height: 2.25rem;
+  min-width: 2.5rem;
+  max-width: 88%;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  letter-spacing: -0.011em;
+  background-color: var(--color-ios-fill);
+  color: #000000;
+  grid-row-start: 2;
+}
+
+.dark .chat-bubble {
+  background-color: #2c2c2e;
+  color: #ffffff;
+}
+
+.chat-bubble:before {
+  position: absolute;
+  bottom: 0;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: inherit;
+  content: "";
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: var(--mask-chat);
+  -webkit-mask-image: var(--mask-chat);
+}
+
+.chat-start .chat-bubble {
+  grid-column-start: 2;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.chat-start .chat-bubble:before {
+  left: -0.74rem;
+  mask-position: 0px 0px;
+  -webkit-mask-position: 0px 0px;
+}
+
+.chat-end .chat-bubble {
+  grid-column-start: 1;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.chat-end .chat-bubble:before {
+  right: -0.74rem;
+  transform: rotateY(180deg);
+  mask-position: 0px 0px;
+  -webkit-mask-position: 0px 0px;
+}
+
+/* DaisyUI Avatar helper */
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar > div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  aspect-ratio: 1 / 1;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.avatar > div svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* DaisyUI Chat Bubble Colors — mapped onto iOS system colours. */
+.chat-bubble-primary {
+  background-color: var(--color-ios-blue);
+  color: #ffffff;
+}
+.dark .chat-bubble-primary {
+  background-color: var(--color-ios-blue-dark);
+  color: #ffffff;
+}
+
+.chat-bubble-secondary {
+  background-color: var(--color-ios-purple);
+  color: #ffffff;
+}
+
+.chat-bubble-accent {
+  background-color: var(--color-ios-teal);
+  color: #ffffff;
+}
+
+.chat-bubble-neutral {
+  background-color: #48484a;
+  color: #ffffff;
+}
+.dark .chat-bubble-neutral {
+  background-color: #2c2c2e;
+  color: #ffffff;
+}
+
+.chat-bubble-info {
+  background-color: var(--color-ios-blue);
+  color: #ffffff;
+}
+
+.chat-bubble-success {
+  background-color: var(--color-ios-green);
+  color: #ffffff;
+}
+
+.chat-bubble-warning {
+  background-color: var(--color-ios-orange);
+  color: #ffffff;
+}
+
+.chat-bubble-error {
+  background-color: var(--color-ios-red);
+  color: #ffffff;
+}
+

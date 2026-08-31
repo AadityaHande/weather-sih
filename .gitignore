@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+app.db
+
+# Node
+node_modules/
+.next/
+dist/
+coverage/
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Debug and test output artifacts (Milestone 1 Audit F-04)
+# These are never source — they are generated during development/testing.
+*_debug.txt
+*_results.txt
+tmp_*.txt

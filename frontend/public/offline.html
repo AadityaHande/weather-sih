@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+  Standalone offline fallback, served by the service worker when a navigation
+  request fails and no cached copy of that route exists.
+
+  Intentionally dependency-free: no Next.js runtime, no Tailwind, no webfont.
+  Anything it needed to fetch is exactly what is unavailable when it is shown.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offline · Mausam</title>
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --border: #e2e8f0;
+        --text: #0f172a;
+        --muted: #64748b;
+        --accent: #0284c7;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000000;
+          --card: #121212;
+          --border: #27272a;
+          --text: #ffffff;
+          --muted: #8e8e93;
+          --accent: #38bdf8;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      .card {
+        width: 100%;
+        max-width: 380px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 32px 24px;
+        text-align: center;
+        box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.08);
+      }
+      .icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 16px;
+        border-radius: 16px;
+        background: rgba(251, 191, 36, 0.14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 { font-size: 18px; font-weight: 700; margin: 0 0 8px; }
+      p { font-size: 13px; line-height: 1.6; color: var(--muted); margin: 0 0 20px; }
+      button {
+        width: 100%;
+        padding: 12px 16px;
+        border: 0;
+        border-radius: 12px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        font-family: inherit;
+      }
+      button:hover { filter: brightness(1.08); }
+      .status {
+        margin-top: 14px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--muted);
+      }
+      .dot {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #f43f5e;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+      .dot.online { background: #10b981; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="icon" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 1l22 22" />
+          <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55" />
+          <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39" />
+          <path d="M10.71 5.05A16 16 0 0 1 22.58 9" />
+          <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88" />
+          <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+          <line x1="12" y1="20" x2="12.01" y2="20" />
+        </svg>
+      </div>
+      <h1>You're offline</h1>
+      <p>
+        Mausam can't reach the forecast service right now. Any screen you've already
+        opened will still show its last update. Reconnect to get current conditions
+        and severe weather warnings.
+      </p>
+      <button type="button" onclick="window.location.reload()">Try again</button>
+      <div class="status">
+        <span class="dot" id="dot"></span><span id="label">No connection</span>
+      </div>
+    </div>
+
+    <script>
+      // Reflect live connectivity, and get out of the way automatically once the
+      // network returns so the user does not have to tap anything.
+      (function () {
+        var dot = document.getElementById("dot");
+        var label = document.getElementById("label");
+
+        function sync() {
+          var online = navigator.onLine;
+          dot.className = online ? "dot online" : "dot";
+          label.textContent = online ? "Back online — reloading…" : "No connection";
+          if (online) setTimeout(function () { window.location.reload(); }, 600);
+        }
+
+        window.addEventListener("online", sync);
+        window.addEventListener("offline", sync);
+        sync();
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,360 @@
+{
+  "nav": {
+    "home": "Home Feed",
+    "weather": "Weather",
+    "map": "Interactive Map",
+    "chatbot": "AI Chatbot",
+    "settings": "Settings"
+  },
+  "common": {
+    "appName": "Mausam",
+    "loading": "Loading...",
+    "save": "Save Preferences",
+    "saved": "Saved Successfully!",
+    "cancel": "Cancel",
+    "close": "Close",
+    "search": "Search...",
+    "location": "Location",
+    "currentLoc": "Current Location",
+    "gpsActive": "GPS Active",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "language": "Language",
+    "selectLanguage": "Select Language",
+    "allRightsReserved": "All rights reserved.",
+    "live": "Live",
+    "high": "High",
+    "low": "Low",
+    "feelsLike": "Feels like",
+    "direction": "Direction",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "tonight": "Tonight",
+    "am": "AM",
+    "pm": "PM"
+  },
+  "freshness": {
+    "live": "Live",
+    "cached": "Cached",
+    "stale": "Stale",
+    "simulated": "Simulated",
+    "unavailable": "Unavailable",
+    "updated": "Updated",
+    "staleTitle": "This data may be out of date",
+    "staleBody": "We could not confirm a recent update from the weather service. Refresh to try again.",
+    "staleBodyWithTime": "Last confirmed update was {time}. Refresh to try again."
+  },
+  "refresh": {
+    "pullToRefresh": "Pull to refresh",
+    "releaseToRefresh": "Release to refresh",
+    "refreshing": "Refreshing..."
+  },
+  "map": {
+    "locate": "Locate Me",
+    "gpsActive": "GPS Active",
+    "pinpointing": "Pinpointing GPS...",
+    "locatingArea": "Locating your area...",
+    "inspectingLocation": "Inspecting location...",
+    "searchPlaceholder": "Search locality, city or coordinates...",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "recenter": "Recenter on your location",
+    "refreshWeather": "Refresh weather",
+    "clickToInspect": "Tap the map to inspect any location",
+    "layers": {
+      "radar": "Rain Radar",
+      "temp": "Temperature",
+      "wind": "Wind Flow",
+      "clouds": "Clouds",
+      "pressure": "Pressure",
+      "none": "Map Only"
+    },
+    "radarLoop": "Doppler Radar Loop",
+    "play": "Play",
+    "pause": "Pause",
+    "live": "Live",
+    "light": "Light (0.1 mm)",
+    "heavy": "Heavy (50+ mm)",
+    "tempHeatmap": "Temperature Heatmap",
+    "windVelocity": "Wind Velocity Map",
+    "cloudCover": "Cloud Satellite Cover",
+    "pressureMap": "Atmospheric Pressure",
+    "liveOverlay": "Live Overlay",
+    "freezing": "Freezing (<0°C)",
+    "hot": "Hot (>38°C)",
+    "calm": "Calm (<5 kph)",
+    "gale": "Gale (>60 kph)",
+    "clear": "Clear (0%)",
+    "overcast": "Overcast (100%)",
+    "lowPressure": "Low (<980 hPa)",
+    "highPressure": "High (>1030 hPa)",
+    "rain": "Rain",
+    "wind": "Wind",
+    "uv": "UV Index",
+    "aqi": "AQI",
+    "feels": "Feels"
+  },
+  "offline": {
+    "title": "You're offline",
+    "serviceUnreachableTitle": "Can't reach the weather service",
+    "showingCached": "Showing your last update from {time}.",
+    "noCache": "No saved update available yet. Reconnect to load your forecast."
+  },
+  "states": {
+    "offlineTitle": "No connection",
+    "offlineBody": "Check your network and try again — your last saved forecast stays available offline.",
+    "errorTitle": "Couldn't load your forecast",
+    "errorBody": "The weather service didn't respond as expected. This is usually temporary.",
+    "noDataTitle": "No data for this location",
+    "noDataBody": "We don't have forecast coverage for these coordinates yet. Try a nearby city.",
+    "changeLocation": "Change location",
+    "locationDeniedTitle": "Location access is off",
+    "locationDeniedBody": "Mausam needs your location to personalize the forecast. Allow location access, or pick a place manually.",
+    "locationDeniedBodyWithFallback": "Showing {location} instead. Allow location access or pick a place manually for a forecast where you actually are.",
+    "chooseManually": "Pick manually",
+    "tryLocationAgain": "Try again"
+  },
+  "share": {
+    "action": "Share",
+    "copied": "Copied",
+    "failed": "Couldn't share"
+  },
+  "personas": {
+    "health": {
+      "title": "Health-Conscious",
+      "shortTitle": "Health",
+      "subtitle": "AQI dial, UV index, pollen forecast, and humidity alerts"
+    },
+    "fitness": {
+      "title": "Fitness Enthusiast",
+      "shortTitle": "Runner",
+      "subtitle": "Best workout window, heat alert, and rain predictions"
+    },
+    "beach": {
+      "title": "Beachgoer / Surfer",
+      "shortTitle": "Beach",
+      "subtitle": "Tide chart, wave height, sea temp, and swell direction"
+    },
+    "traveler": {
+      "title": "Traveler",
+      "shortTitle": "Travel",
+      "subtitle": "Multi-city cards, flight weather risk, and packing tips"
+    },
+    "agriculture": {
+      "title": "Farmer / Agronomist",
+      "shortTitle": "Agri",
+      "subtitle": "Soil moisture, evaporation rate, and spray windows"
+    },
+    "family": {
+      "title": "Family & Kids",
+      "shortTitle": "Family",
+      "subtitle": "Park weather, weekend forecast, and playground comfort"
+    },
+    "commute": {
+      "title": "Daily Commuter",
+      "shortTitle": "Commute",
+      "subtitle": "Traffic weather risk, road grip, and visibility index"
+    },
+    "event": {
+      "title": "Event Planner",
+      "shortTitle": "Event",
+      "subtitle": "10-day forecast, rain probability, and best timings"
+    }
+  },
+  "metrics": {
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "wind": "Wind Speed",
+    "rain": "Rain Chance",
+    "uv": "UV Index",
+    "aqi": "Air Quality",
+    "notes": {
+      "warm": "Warm conditions",
+      "idealThermal": "Ideal thermal balance",
+      "elevatedMoisture": "Elevated moisture",
+      "comfortableMoisture": "Comfortable moisture",
+      "moderateWind": "Moderate resistance",
+      "lightWind": "Light gentle breeze",
+      "scatteredRain": "Scattered rain risk",
+      "dryConditions": "Dry conditions expected",
+      "highUv": "High UV intensity",
+      "safeUv": "Safe UV radiation",
+      "moderateAqi": "Moderate air quality",
+      "cleanAqi": "Clean breathing air"
+    }
+  },
+  "insights": {
+    "headerSuffix": "Insights",
+    "aiPowered": "AI Powered",
+    "personaIndexTitle": "Persona Index & Insights",
+    "personaIndexSubtitle": "Tailored weather information that matters to you",
+    "dynamicPriority": "Dynamic Priority",
+    "managePersonas": "Manage Selected Personas in Settings",
+    "nextWindow": "Next Window",
+    "avoid": "Avoid",
+    "score": "Score",
+    "notThisTime": "Not this time?",
+    "suggestAnother": "Suggest another ▾",
+    "closeAlternative": "▲ Close",
+    "optionOf": "Option {current} of {total}",
+    "nextBest": "Next best",
+    "filters": {
+      "all": "All",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "reset": "Reset"
+    },
+    "reasons": {
+      "coolAirBreeze": "Cool air & gentle breeze",
+      "postSunsetCooling": "Post-sunset cooling",
+      "lowestTemp": "Lowest daily temperature",
+      "zeroSolarUv": "Zero solar UV radiation",
+      "cleanAirDispersed": "Dispersed PM2.5 & clean air",
+      "freshAir": "Fresh circulating air",
+      "clearRoads": "Clear roads & dry transit",
+      "offshoreBreeze": "Offshore breeze & mild sun",
+      "deepSoilRoot": "Deep soil root uptake",
+      "mildParkPlaytime": "Mild park playtime weather",
+      "middayHeatUv": "Midday heat & peak UV",
+      "morningSmog": "Ground-level morning smog",
+      "rushHourTraffic": "Rush hour traffic delays",
+      "choppyWindsUv": "Choppy winds & intense UV",
+      "highEvaporationHeat": "High evaporation heat",
+      "peakHeatDirectUv": "Peak heat & direct UV"
+    }
+  },
+  "home": {
+    "glanceTitle": "Live Atmospheric Overview",
+    "viewDashboard": "View Full Weather Dashboard",
+    "p0Warning": "P0 Severe Warning Override",
+    "moisture": "Moisture",
+    "precipitation": "Precipitation",
+    "moderate": "Moderate"
+  },
+  "weather": {
+    "title": "Atmospheric Diagnostics",
+    "subtitle": "Live sensor parameters",
+    "windGusts": "Wind Gusts",
+    "pressure": "Pressure",
+    "cloudCover": "Cloud Cover",
+    "surfaceMsl": "Surface MSL",
+    "overcastIndex": "Overcast Index",
+    "celestialTitle": "Sun & Astronomical Cycle",
+    "celestialSubtitle": "Ephemeris & solar duration",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "daylightDuration": "Daylight Duration",
+    "windDirectionFormat": "{dir} Direction ({deg}°)",
+    "windDirectionSimple": "{dir} Direction",
+    "activityRings": {
+      "precipitationLabel": "PRECIPITATION",
+      "precipitationSub": "Rain probability",
+      "humidityLabel": "HUMIDITY",
+      "humiditySub": "Atmospheric moisture",
+      "windLabel": "WIND SPEED",
+      "windSub": "Surface vectors"
+    },
+    "forecastTabs": {
+      "temperature": "Temperature",
+      "precipitation": "Precipitation",
+      "wind": "Wind"
+    },
+    "humidityStatuses": {
+      "humid": "Humid",
+      "comfortable": "Comfortable",
+      "dry": "Dry"
+    },
+    "uvLevels": {
+      "low": "Low Risk",
+      "moderate": "Moderate Risk",
+      "high": "High Risk",
+      "veryHigh": "Very High Risk",
+      "extreme": "Extreme Risk",
+      "goodUv": "Good UV"
+    },
+    "directions": {
+      "N": "North",
+      "S": "South",
+      "E": "East",
+      "W": "West",
+      "NE": "North-East",
+      "NW": "North-West",
+      "SE": "South-East",
+      "SW": "South-West",
+      "NNE": "North-Northeast",
+      "ENE": "East-Northeast",
+      "ESE": "East-Southeast",
+      "SSE": "South-Southeast",
+      "SSW": "South-Southwest",
+      "WSW": "West-Southwest",
+      "WNW": "West-Northwest",
+      "NNW": "North-Northwest"
+    },
+    "conditions": {
+      "clear": "Clear Sky",
+      "clearDay": "Clear Sky • Sunny",
+      "clearNight": "Clear Night • Starry",
+      "mainlyClear": "Mainly Clear",
+      "partlyCloudy": "Partly Cloudy",
+      "partlyCloudyDay": "Partly Cloudy",
+      "partlyCloudyNight": "Partly Cloudy Night",
+      "overcast": "Overcast",
+      "fog": "Fog / Mist",
+      "drizzle": "Drizzle",
+      "rain": "Rain",
+      "showers": "Rain Showers",
+      "thunderstorm": "Thunderstorm Alert",
+      "snow": "Snow"
+    }
+  },
+  "chatbot": {
+    "title": "Mausam AI",
+    "badge": "Live Telemetry",
+    "welcomeMsg": "Hey there! I am your Mausam weather companion. Ask me anything about whether it's raining right now, rain forecasts for later, or clothing and workout advice!",
+    "placeholder": "Ask about live rain right now, forecasts for later, or any city...",
+    "send": "Send",
+    "helper": "Distinguishes live current observations from forecast probabilities. Enter to send, Shift+Enter for newline.",
+    "analyzing": "Analyzing live observation telemetry...",
+    "rainingNow": "Raining now",
+    "notRainingNow": "No active rain",
+    "rainForecast": "rain forecast",
+    "confirmLocation": "Confirm or Change Location",
+    "locationDesc": "Ensure weather matches what is outside your window",
+    "useGps": "Use Auto-Detected GPS Location"
+  },
+  "settings": {
+    "title": "System Settings",
+    "subtitle": "Manage preferences, regional localization, and health profiles",
+    "accountTitle": "Account Profile",
+    "authenticated": "Authenticated Account",
+    "guest": "Anonymous Guest Session",
+    "authState": "Authentication State:",
+    "guestDesc": "Local Storage Guest (No Login Required)",
+    "signOut": "Sign Out",
+    "signIn": "Sign In",
+    "languageSection": {
+      "title": "Language & Regional Localization",
+      "subtitle": "Available in India's major official and scheduled languages with RTL support",
+      "current": "Current Language",
+      "switchBtn": "Change Language",
+      "phase1": "Phase 1: Major Widely-Spoken Languages",
+      "phase2": "Phase 2: Remaining Scheduled Languages",
+      "aiBadge": "AI Chatbot Supported",
+      "rtlBadge": "RTL Layout"
+    },
+    "units": {
+      "title": "Display Units",
+      "subtitle": "Customize temperature scale and wind speed units",
+      "temperature": "Temperature Scale",
+      "wind": "Wind Speed Format"
+    },
+    "personasTitle": "Personalization Personas",
+    "personasSubtitle": "Select up to 3 personas to shape your homepage card ranking ({current}/3 selected)",
+    "maxThreeAllowed": "Max 3 Allowed",
+    "maxThreeBanner": "Maximum 3 Personas Allowed",
+    "maxThreeBannerDesc": "You can choose up to 3 personas. Please deselect an active persona to add a new one.",
+    "dismiss": "Dismiss",
+    "saveSuccess": "Preferences successfully updated! The personalized homepage cards will re-rank immediately."
+  }
+}
